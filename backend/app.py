@@ -34,12 +34,14 @@ from routes.auth import auth_bp
 from routes.inventory import inventory_bp
 from routes.notifications import notifications_bp
 from routes.analytics import analytics_bp
+from routes.users import users_bp
 
 # Register blueprints
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
 app.register_blueprint(inventory_bp, url_prefix='/api/inventory')
 app.register_blueprint(notifications_bp, url_prefix='/api/notifications')
 app.register_blueprint(analytics_bp, url_prefix='/api/analytics')
+app.register_blueprint(users_bp, url_prefix='/api/users')
 
 if __name__ == '__main__':
     app.run(debug=True) 
